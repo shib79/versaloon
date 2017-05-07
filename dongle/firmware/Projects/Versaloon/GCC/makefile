@@ -20,6 +20,7 @@ EMBEDDED_VSPROG_EN = no
 # STM32F0_Discovery
 #
 HW_BOARD = MiniRelease1
+HSE_VALUE = 8000000
 
 #
 include	../../board_defs.mk
