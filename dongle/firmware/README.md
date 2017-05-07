@@ -1,24 +1,30 @@
-About CDC firmware(currently for Mini-Versalon ONLY)
+About CDC firmware
+==================
+
+This firmware is currently for Mini-Versalon ONLY.
 
 This CDC tool implements 1 CDC interface and 1 MSC interface, both can be operated at the same time.
 
-Resources:
-without MSC(compiled under IAR): about 8K for flash, 2K + USB and UART buffer for SRAM.
-with MSC(compiled under IAR):    about 10.5K for flash, 3K + USB and UART buffer for SRAM.
-2 GPIOs for LEDs, USART0, USB.
-External oscillator should be 8M/12M/16M.
+Resources
+=========
 
-Compilation environment:
-1. IAR EWARM 5.40 KS, under Projects/CDC/EWARM5.40
-  See http://www.iar.com.
-2. Codesourcery G++ Lite, under Projects/CDC/GCC
-  See http://www.codesourcery.com
+* about 8K for flash, 2K + USB and UART buffer for SRAM
+* about 10.5K for flash, 3K + USB and UART buffer for SRAM
+* 2 GPIOs for LEDs, USART0, USB
+* External oscillator should be 8M/12M/16M
 
-Configuration:
-1. target chip
-  For IAR, just configure the target chip in the option dialog, and modify the linker file according to the application. Select the corresponding startup file under HW-->Lib-->CMSIS-->startup virtual directory. Remember to select "release" to save about 0.2K flash.
-  For GCC, edit stm32.ld for RAM, FLASH, and _estack. To build with GCC, just make in Projects/CDC/GCC.
-  Modify NVIC_Configuration function in HW/HW.c to configure the flash start address. Modify HSE_Value definitation in stm3210x.h in HW/lib/CMSIS/Core/CM3/stm32f10x.h to the real frequency of external oscillator, available values are 8000000/12000000/16000000.
+Build
+=====
+
+To build with GCC, just make in Projects/CDC/GCC.
+
+Configuration
+=============
+
+* Modify NVIC_Configuration function in HW/HW.c to configure the flash start address.
+* Modify HSE_Value definitation in stm3210x.h in HW/lib/CMSIS/Core/CM3/stm32f10x.h to the real frequency of external oscillator, available values are 8000000/12000000/16000000.
+
+
 2. functionality(in Projects/CDC/app_cfg.h)
   MSC enable: USB_WITH_MASSSTORAGE, if defined as 0, MSC is disabled; if defined as 1, MSC is enabled.
   udisk start address: MSD_MEMORY_START_ADDR, it should start after firmware and aligned to flash block size of target chip.
@@ -40,11 +46,3 @@ Configuration:
   Caution: If access to unavailable address because of wrong udisk configuration, content of the target chip maybe erased, then you should program the flash again. For example, for STM32F103C8T6(64K flash), there is a chance to use 128K flash, but if accessing flash after 128K, all flash will be erased.
 7. Note
   Do not use Windows to format the udisk, Windows will take more 20K bytes.
-8. Bug report
-  report bugs to simonqian@simonqian.com.
-9. copyright
-  See lincense.
-
-
-About Versaloon firmware
-TBD
