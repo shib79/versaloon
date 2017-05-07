@@ -52,7 +52,7 @@ TARGET_STM32		= XLDensity
 USR_DEFS+=-DCORE_DEBUG=STM32_DBG_NONE
 else
 ########################################################################
-ifeq ($(HW_BOARD),Bluepill)
+ifeq ($(HW_BOARD),STM32F103C8_BluePill)
 ########################################################################
 _HARDWARE_VER		= 0x15
 FLASH_LOAD_OFFSET	= 0x8000
@@ -178,6 +178,7 @@ else
 # Unknown board error
 ########################################################################
 $(error Missing or unknown HW_BOARD defined in makefile)
+endif
 endif
 endif
 endif
