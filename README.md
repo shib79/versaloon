@@ -13,7 +13,11 @@ Binaries
 
 Binaries are in the directory ```release/firmware/STM32F103C8_BluePill```.
 
+Download the firmware here:
+
+https://raw.githubusercontent.com/zoobab/versaloon/master/release/firmware/STM32F103C8_BluePill/Versaloon_GCC-STM32F103C8_BluePill-0x8000.hex
+
 Flash
 =====
 
-Backporting stm32flash to Ubuntu 14.04...
+Still have to backport the tool stm32flash to Ubuntu 14.04...
