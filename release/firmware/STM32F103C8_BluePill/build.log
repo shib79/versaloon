@@ -1,16 +1,16 @@
-Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon 23.08 MB
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon 23.09 MB
 Step 1 : FROM ubuntu:14.04
  ---> 302fa07d8117
 Step 2 : MAINTAINER Benjamin Henrion <zoobab@gmail.com>
- ---> Running in 029f93530e9f
- ---> f6c220d25bd7
-Removing intermediate container 029f93530e9f
+ ---> Running in bf4b31e5d9ba
+ ---> cdc8a4470b9e
+Removing intermediate container bf4b31e5d9ba
 Step 3 : LABEL Description "This image builds a JTAG Versaloon firmware for the STM32 Bluepill board."
- ---> Running in 8a862dfd391a
- ---> 4c2e5abf591b
-Removing intermediate container 8a862dfd391a
+ ---> Running in 5d629af1925e
+ ---> 40237f096db7
+Removing intermediate container 5d629af1925e
 Step 4 : RUN DEBIAN_FRONTEND=noninteractive apt-get update -y -q
- ---> Running in da3ccb671069
+ ---> Running in 296312d30550
 Ign http://archive.ubuntu.com trusty InRelease
 Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
 Get:2 http://archive.ubuntu.com trusty-security InRelease [65.9 kB]
@@ -34,12 +34,12 @@ Get:19 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
 Get:20 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
 Get:21 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
 Get:22 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
-Fetched 22.5 MB in 8s (2619 kB/s)
+Fetched 22.5 MB in 10s (2231 kB/s)
 Reading package lists...
- ---> 60aafc39aeda
-Removing intermediate container da3ccb671069
+ ---> 45d518d4b3cf
+Removing intermediate container 296312d30550
 Step 5 : RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q make gcc-arm-none-eabi binutils sudo
- ---> Running in 8f08ba541b28
+ ---> Running in 5a06ce691780
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -66,7 +66,7 @@ Get:8 http://archive.ubuntu.com/ubuntu/ trusty/universe binutils-arm-none-eabi a
 Get:9 http://archive.ubuntu.com/ubuntu/ trusty/universe gcc-arm-none-eabi amd64 4.8.2-14ubuntu1+6 [15.5 MB]
 Get:10 http://archive.ubuntu.com/ubuntu/ trusty/universe libnewlib-dev all 2.1.0-3 [95.3 kB]
 Get:11 http://archive.ubuntu.com/ubuntu/ trusty/universe libnewlib-arm-none-eabi all 2.1.0-3 [6683 kB]
-Fetched 27.5 MB in 13s (1971 kB/s)
+Fetched 27.5 MB in 16s (1710 kB/s)
 Selecting previously unselected package libgmp10:amd64.
 (Reading database ... 11569 files and directories currently installed.)
 Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
@@ -113,46 +113,46 @@ Setting up gcc-arm-none-eabi (4.8.2-14ubuntu1+6) ...
 Setting up libnewlib-dev (2.1.0-3) ...
 Setting up libnewlib-arm-none-eabi (2.1.0-3) ...
 Processing triggers for libc-bin (2.19-0ubuntu6.11) ...
- ---> d4c404c8f5dd
-Removing intermediate container 8f08ba541b28
+ ---> c94fac3b82f0
+Removing intermediate container 5a06ce691780
 Step 6 : ENV user versaloon
- ---> Running in c5d8ced9d7bc
- ---> c5fbcdf2efd4
-Removing intermediate container c5d8ced9d7bc
+ ---> Running in ef63e2acefbd
+ ---> d59b7b2d3543
+Removing intermediate container ef63e2acefbd
 Step 7 : RUN useradd -d /home/$user -m -s /bin/bash $user
- ---> Running in 585023ae21eb
- ---> 8fcb063e1d6d
-Removing intermediate container 585023ae21eb
+ ---> Running in bda31ef0baf0
+ ---> 6b9c41005aed
+Removing intermediate container bda31ef0baf0
 Step 8 : RUN echo "$user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$user
- ---> Running in 62472b308fa3
- ---> 3f163694b0f6
-Removing intermediate container 62472b308fa3
+ ---> Running in eed9861efb24
+ ---> 8b567a011130
+Removing intermediate container eed9861efb24
 Step 9 : RUN chmod 0440 /etc/sudoers.d/$user
- ---> Running in 6b97a319ecd5
- ---> 5e1a77a3cc39
-Removing intermediate container 6b97a319ecd5
+ ---> Running in 6be7b056340d
+ ---> 5411e38dec61
+Removing intermediate container 6be7b056340d
 Step 10 : USER $user
- ---> Running in 253188597bb3
- ---> 183b7244710f
-Removing intermediate container 253188597bb3
+ ---> Running in 7f1043392062
+ ---> c8a71e946f65
+Removing intermediate container 7f1043392062
 Step 11 : WORKDIR /home/$user
- ---> Running in f4e992e055f4
- ---> 2d63250c8452
-Removing intermediate container f4e992e055f4
+ ---> Running in ccaf41b8d751
+ ---> 0ce608ec1a4c
+Removing intermediate container ccaf41b8d751
 Step 12 : RUN mkdir -pv code
- ---> Running in 23f9ad064bdc
+ ---> Running in 767ff7575299
 mkdir: created directory 'code'
- ---> 6e79b99c920a
-Removing intermediate container 23f9ad064bdc
+ ---> fdffdfae21cd
+Removing intermediate container 767ff7575299
 Step 13 : COPY . ./code/
- ---> be43bb409001
-Removing intermediate container b5f242029c89
+ ---> 4216e72ee0ce
+Removing intermediate container 013d97723d40
 Step 14 : WORKDIR /home/$user/code/dongle/firmware/Projects/Versaloon/GCC
- ---> Running in c9da9c575fbc
- ---> 67f38fce13c9
-Removing intermediate container c9da9c575fbc
+ ---> Running in d141017124da
+ ---> b6ff4de84cb5
+Removing intermediate container d141017124da
 Step 15 : RUN make
- ---> Running in 25289859ca17
+ ---> Running in b0930d5d0f6b
 Start Compiling Project Versaloon
 User Files:
 ./main.o ./usb_protocol_Versaloon.o ./vsfusbd_Versaloon.o ./compiler_string.o ./syscall.o ./stlink.o ./adi_v5p1.o ./cm_common.o ./app_interfaces.o ./GPIO.o ./CLKO.o ./USART.o ./SPI.o ./SDIO.o ./JTAG_TAP.o ./SWD.o ./SWIM.o ./DUSI.o ./MicroWire.o ./PowerExt.o ./IIC.o ./C2.o ./ISSP.o ./LPC_ICP.o ./MSP430_JTAG.o ./BDM.o ./PWM.o ./EBI.o ./ADC.o ./interfaces.o ./core.o ./STM32_CLKO.o ./STM32_GPIO.o ./STM32_USBD.o ./STM32_SPI.o ./STM32_TIM.o ./STM32_EINT.o ./STM32_ADC.o ./STM32_USART.o ./STM32_EBI.o ./STM32_FLASH.o ./STM32_SDIO.o ./usart_stream.o ./stream.o ./mal.o ./vsf_usbd.o ./vsfusbd_CDC.o ./vsfusbd_CDCACM.o ./vsfusbd_HID.o ./vsfusbd_MSC_BOT.o ./SCSI.o ./buffer.o ./fakefat32.o ./crc.o ./USB_TO_XXX.o ./USB_TO_CLKO.o ./USB_TO_USART.o ./USB_TO_SPI.o ./USB_TO_IIC.o ./USB_TO_GPIO.o ./USB_TO_PWM.o ./USB_TO_ADC.o ./USB_TO_DAC.o ./USB_TO_POWER.o ./USB_TO_C2.o ./USB_TO_ISSP.o ./USB_TO_LPCICP.o ./USB_TO_MSP430_JTAG.o ./USB_TO_JTAG_HL.o ./USB_TO_SWD.o ./USB_TO_JTAG_LL.o ./USB_TO_SWIM.o ./USB_TO_JTAG_RAW.o ./USB_TO_BDM.o ./USB_TO_DUSI.o ./USB_TO_MICROWIRE.o ./USB_TO_EBI.o ./CommandProcessor.o
@@ -185,7 +185,7 @@ arm-none-eabi-gcc -c -mcpu=cortex-m3 -mthumb -mfpu=vfp  -nostartfiles -fno-commo
   TIM_TypeDef * timer;
                 ^
 [0m[91m../../../../../vsf/interfaces/cpu/stm32/sdio/STM32_SDIO.c: In function 'stm32_sdio_data_tx_isready':
-../../../../../vsf/interfaces/cpu/stm32/sdio/STM32_SDIO.c:310:11: warning: unused variable 'status' [-Wunused-variable]
+[0m[91m../../../../../vsf/interfaces/cpu/stm32/sdio/STM32_SDIO.c:310:11: warning: unused variable 'status' [-Wunused-variable]
   uint32_t status = SDIO->STA;
            ^
 [0m[91m../../../../../vsf/interfaces/cpu/stm32/sdio/STM32_SDIO.c:318:1: warning: control reaches end of non-void function [-Wreturn-type]
@@ -216,6 +216,8 @@ size Versaloon_GCC-STM32F103C8_BluePill-0x8000.elf
   57636	   3196	  14220	  75052	  1252c	Versaloon_GCC-STM32F103C8_BluePill-0x8000.elf
 ------------------------------------------------------------
 bye!!
- ---> 91b5edb6688b
-Removing intermediate container 25289859ca17
-Successfully built 91b5edb6688b
+ ---> 43952cb1ed83
+Removing intermediate container b0930d5d0f6b
+Successfully built 43952cb1ed83
+cp: cannot stat '/home/versaloon/code/dongle/firmware/Projects/Versaloon/GCC/*.hex': No such file or directory
+cp: cannot stat '/home/versaloon/code/dongle/firmware/Projects/Versaloon/GCC/*.elf': No such file or directory
