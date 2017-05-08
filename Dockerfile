@@ -14,4 +14,4 @@ USER $user
 WORKDIR /home/versaloon
 RUN mkdir -pv code
 COPY . ./code/
-RUN cd code/dongle/firmware/Projects/Versaloon/GCC && make
+RUN cd code/dongle/firmware/Projects/Versaloon/GCC && make && cp -v *.hex *.elf /mnt
