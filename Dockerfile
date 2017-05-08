@@ -11,7 +11,8 @@ RUN echo "$user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$user
 RUN chmod 0440 /etc/sudoers.d/$user
 
 USER $user
-WORKDIR /home/versaloon
+WORKDIR /home/$user
 RUN mkdir -pv code
 COPY . ./code/
-RUN cd code/dongle/firmware/Projects/Versaloon/GCC && make && cp -v *.hex *.elf /mnt
+WORKDIR /home/$user/code/dongle/firmware/Projects/Versaloon/GCC
+RUN make
