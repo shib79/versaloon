@@ -31,3 +31,8 @@ Todo
 * Try it out on a maple board
 * Try it out on a blackpill board
 * Add some wiring/fritzing documention with some MIPS targets
+
+Links
+=====
+
+* Similar firmware: https://github.com/x893/CMSIS-DAP
