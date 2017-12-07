@@ -36,3 +36,4 @@ Links
 =====
 
 * Similar firmware: https://github.com/x893/CMSIS-DAP
+* Alan Acassis, Getting STLink with Versalon firmware working with OpenOCD: https://acassis.wordpress.com/2012/02/21/getting-stlink-with-versalon-firmware-working-with-openocd/
