@@ -37,6 +37,8 @@ SECTIONS
         *(.text.*)                   /* remaining code */
         *(.rodata)                 /* read-only data (constants) */
         *(.rodata*)
+	KEEP (*(.init))
+        KEEP (*(.fini))
         *(.glue_7)
         *(.glue_7t)
 
