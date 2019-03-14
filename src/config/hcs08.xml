@@ -17,4 +17,12 @@
     <sram_addr>0x0070</sram_addr>
     <sram_size>1024</sram_size>
   </chip>
+  <chip name="mc9s08gb60">
+    <chip_id>0x02</chip_id>
+	  <app_page_size>512</app_page_size>
+    <app_page_num>120</app_page_num>
+    <app_addr>0x1000</app_addr>
+    <sram_addr>0x0080</sram_addr>
+    <sram_size>4096</sram_size>
+  </chip>
 </series>
