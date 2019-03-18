@@ -235,6 +235,10 @@ ENTER_PROGRAM_MODE_HANDLER(hcs08)
 	
 	hcs08_read_status(&bdm_status);
 	hcs08_write_byte(HCS08_SOPT_ADDR, HCS08_SOPT_BKGDPE | HCS08_SOPT_RSTPE);
+			
+	hcs08_write_byte(HCS08_ICGC1_ADDR, HCS08_ICGC1_VAL);
+	hcs08_write_byte(HCS08_ICGC2_ADDR, HCS08_ICGC2_VAL);
+	
 	if (commit())
 	{
 		return VSFERR_FAIL;

@@ -65,5 +65,14 @@
 #define HCS08_NVFEOPT_ADDR					0xFFBF
 
 
+#define HCS08_ICGC1_ADDR					0x0048
+#define HCS08_ICGC1_VAL						0x48  // CLKS=01, RANGE=1
+#define HCS08_ICGC2_ADDR					0x0048+1
+#define HCS08_ICGC2_VAL						0x51 // MFD=5, RFD=1
+#define HCS08_ICGTRIM_ADDR					0x0048+6
+#define HCS08_ICGTRIM_VAL					0x80
+
+
+
 #endif /* __HCS08_INTERNAL_H_INCLUDED__ */
 
